@@ -1,0 +1,47 @@
+p{
+    background-color: yellow;
+    color: red;
+    width: 200px;
+    height: 200px;
+}
+
+.element, .element2{
+    padding: 5px;
+    background-color: blue;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+
+.element2 {
+    background-color: red;
+}
+
+h1, h2, h3, h4, #hover, #hover2 {
+    padding: 5px;
+    background-color: green;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+h2 {
+    background-color: orange;
+}
+h3 {
+    background-color: aqua;
+}
+h4 {
+    background-color: red;
+}
+#hover {
+    background-color: blueviolet;
+}
+#hover2 {
+    background-color: greenyellow;
+    /* display: none; */
+}
