@@ -6,186 +6,68 @@
     <title>Document</title>
     <link rel="stylesheet" href="./src/styles.css">
     <script src = "./src/jquery.js"></script>
+    <script src = "./src/MyPlugin.js"></script>
     <script>
 
-        // $(document).ready(function (){
-        //     $('#btnHide').click(function(){
-        //         $('p').hide() 
-        //     })
-        // })
+       
 
-        $.noConflict();
+        // $.noConflict();
 
-        jQuery(document).ready(($) => {
-          
-            $('#btnHide').click(() => {
-                $('p').hide()
-            });
+        // jQuery(document).ready(($) => { 
+        // }
 
-            $('p').click(function (){
-                $(this).hide()
-            });
 
-            $('div').dblclick(function(){
-                $(this).hide()
-            });
+        $(document).ready(() => {
+            $('.test').faradars();
 
-            $("h1").mouseenter(function ()  {
-                $(this).hide()
-            });
 
-            $("h2").mouseleave(function ()  {
-                $(this).hide()
+            $(".test").click(function () {
+                $('.test').changeColor()
             })
-            $("h3").mousedown(function ()  {
-                $(this).hide()
-            })
-            $("h4").mouseup(function ()  {
-                $(this).hide()
-            })
-
-            $("#hover").hover(function () {
-                $(this).hide()
-            });
-
-            $('#click-hide-show').hover(() => {
-                $('#hover2').hide()
-                
-                },()=> {
-                    $('#hover2').show()
-            });
-
-            $("#textNumber").focus(function(){
-                $(this).css('background-color', "red")
-            })
-            $("#textNumber").blur(function(){
-                $(this).css('background-color', "black")
-            })
-
-
-            $("#inputClick").on("click", ()=> {
-                $('#textNumber').css('background-color', "silver")
-            })
-            // object 
-            var person = {
-                name : "amir",
-                family : 'taki',
-                languge : "javaScript",
-                age : 28,
-            };
-            // object
-            $("#text").on(
-               {
-                    "click": function (){
-                        $('.text').css('color', 'red')
-                    },
-
-                    "mouseleave":function() {
-                        $('.text').css('color', 'yellow')
-                    },
-
-                    "dblclick": function(){
-                        $(this).css('background-color', 'green')
-                    },
-                    "mouseenter": ()=> {
-                        $("#text").css("color", "silver")
-                    }
-                    
-               }
-              
-            )
         })
-      
+        
       
     </script>
 
 </head>
 <body>
-    
-
-    <p>hello : click => hide()</p>
-    <p>learning jquery : click => hide()</p>
-    <input type="button" id = "btnHide" value = "Hide">
-
-    <div class = "element">dbclick container => hide()</div>
-    <div class = "element2">dbclick container => hide()</div>
-
-    <br />
-
-    <h1>mouseEnter container  => hide ()</h1>    <br />
-
-    <h2>mouseLeave container  => hide ()</h2>    <br />
-
-    <h3>mouseDown container  => hide ()</h3>
-    <br />
-
-    <h4>mouseUp container  => hide ()</h4>
-    <br />
-
-    <div id = "hover">HOVER container  => hide ()</div>
-    <br />
-
-    <div id = "hover2">SHOW CLICK  container  => hide ()</div>
-    <br />
-
-    <button id = "click-hide-show">click hide & show</button>
-   
-    <br /> 
-    <br /> 
-
-    <input id = 'textNumber' type="text">
-    <br/>
-    <br/>
-    <button id = "inputClick">click change bg input</button>
-
-    
-    <br/>
-    <div class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eveniet repellat autem illum aut in nihil quod, repudiandae aliquam quisquam, dolorem soluta nulla voluptas quidem et laudantium facere dolores quas?</div>
-    <button id = 'text'>text-button</button>
+        <div class="">jQery</div>
+        <br>
+        <div class="test">test</div>
 </body>
 
 </html>
-
 <!-- 
-https://www.youtube.com/watch?v=rJvBmZRydLQ&list=PLrkFExZLgWo5IN7hvHIAdhcEhLFuzp2gJ
--->
-<!-- 
+ https://www.youtube.com/watch?v=j_whHnw48Uk&list=PLrkFExZLgWo5IN7hvHIAdhcEhLFuzp2gJ&index=2
+ 9 : 30
+ 1- querySelectorAll -> $('')
+ -----------------------------------------------------------------------------------
+ 2- $('').event(function() 
+     commands
+ })
+ -----------------------------------------------------------------------------------
+ 3- $(document).ready(function () 
+     commands
+ })
+ -----------------------------------------------------------------------------------
+ 4-  
+     1) $.noConflict()  =====>   $('') => convert =>  jQeuery(''
+     2) var jq =  $.noConflict()  =====>   $('') => convert =>  jq(''
+     3) $.noConflict() ;
+         jQuery(document).ready(function($)){
+             $('')......
+         
+ -----------------------------------------------------------
+ 5- object :
+ $('').on(
+ {
+     "click" : () => {
+         commands
+     }
+     "mouseleave" : () => {
+         commands
+     },
+     .....
+ })
 
-1- querySelectorAll -> $('')
------------------------------------------------------------------------------------
-2- $('').event(function() {
-
-    commands
-})
------------------------------------------------------------------------------------
-3- $(document).ready(function () {
-
-    commands
-})
------------------------------------------------------------------------------------
-4-  
-    1) $.noConflict()  =====>   $('') => convert =>  jQeuery('')
-
-    2) var jq =  $.noConflict()  =====>   $('') => convert =>  jq('')
-
-    3) $.noConflict() ;
-        jQuery(document).ready(function($)){
-            $('')......
-        }
-
-------------------------------------------------------------
-
-5- object :
-$('').on(
-{
-    "click" : () => {
-        commands
-    },
-
-    "mouseleave" : () => {
-        commands
-    },
-    .....
-})
-
--->
+ -->
