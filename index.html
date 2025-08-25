@@ -17,29 +17,53 @@
         // }
 
 
-        $(document).ready(() => {
-            $('.test').faradars();
+        $.noConflict();
 
+        jQuery(document).ready(($) => {
+          
+            // $('#test').click(function () {
+            //     alert('clicked')
+            // })       
+          
+            // $('#test').click(() => {
+            //     alert('clicked')
+            // })       
 
-            $(".test").click(function () {
-                $('.test').changeColor()
+            $('#test').on({
+                "click": () => {
+                    alert('clicked')
+                },
+                "contextmenu": () => {
+                    $("#test").css({color: "red"})
+                }
             })
         })
-        
+
+  
       
     </script>
 
 </head>
 <body>
-        <div class="">jQery</div>
-        <br>
-        <div class="test">test</div>
+      <p id = 'test'>this is a paragraph</p>
+
+    <script>
+        // document.querySelector("#test").onclick =  function() {
+        //     alert("clickd")
+        // }
+        // document.querySelector("#test").addEventListener("click", () => {
+        //     alert("clicded")
+        // })
+    </script>
 </body>
 
 </html>
 <!-- 
- https://www.youtube.com/watch?v=j_whHnw48Uk&list=PLrkFExZLgWo5IN7hvHIAdhcEhLFuzp2gJ&index=2
- 9 : 30
+https://www.youtube.com/watch?v=9TwYaSnb2GI&list=PL0eyrZgxdwhy7byLHsVkuhtRV_IpoJU7n&index=3
+ 
+
+
+
  1- querySelectorAll -> $('')
  -----------------------------------------------------------------------------------
  2- $('').event(function() 
