@@ -22,36 +22,16 @@
         $.noConflict();
 
         jQuery(document).ready(($) => {
-
-            $('#hover').hover(function () {
-                $(this).hide()
-            })
-
-            $('#clickMe').click(function () {
-                $(this).hide()
-            })
-
-            $("#doubleClick").dblclick(function () {
-                $(this).hide();
-            })
-
-            $('#leave').mouseout(function () {
-                $(this).hide()
-            })
-
-            $('#press').keypress((e) => {
-                console.log("ok")
-                if (menu === false){
-                    $('body').css({backgroundColor:"black"})
-                    $(".pargrapah").toggle("active")
-                    $("nav").toggle("active")
-                
-                }
-                else {
-                    $('body').css({backgroundColor:"white"})
-                    $(".pargrapah").toggle("active")
-                    $("nav").toggle("active")
-                }
+            $("#menuToggle").click(()=> {
+                // $("#side-nav").toggle(1000, () => {
+                //     alert('hi ');
+                // })       
+                // $("#side-nav").fadeIn()
+                // $("#side-nav").fadeOut()
+                $("#side-nav").fadeToggle(2000,  () =>  {
+                    alert("hi")
+                })
+                  
             })
          
         })
@@ -62,21 +42,24 @@
 
 </head>
 <body>
-    <nav>
+    <header>
+        <h1 id = "menuToggle">menu</h1>
+    </header>
+    <nav id = 'side-nav'>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="" class = 'active'>Home</a></li>
+            <li><a href="">My channel</a></li>
+            <li><a href="">Trending</a></li>
+            <li><a href="">Subscribtions</a></li>
+        </ul>
+        <ul>
+            <li><p>LIBRANRY</p></li>    
+            <li><a href="">History</a></li>
+            <li><a href="">Watch Later</a></li>
+            <li><a href="">Purchases</a></li>
+            <li><a href="">jQuery</a></li>
         </ul>
     </nav>
-    <div class="pargrapah active">
-            <p id = "hover">Hover me !</p>
-            <p id = 'clickMe'>Click me!</p>
-            <p id = 'doubleClick'>doubleClick Click me!</p>
-            <p id = "leave">Leave me alone</p>
-            <p id = "press"> Press [enter]</p>
-    </div>
-
 
 
     <script>
