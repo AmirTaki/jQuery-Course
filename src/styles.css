@@ -1,0 +1,16 @@
+nav {
+    display: none;
+}
+.nav.active {
+    display: flex;
+    color: white;
+
+}
+.pargrapah.active{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.pargrapah{
+    display: none;
+}

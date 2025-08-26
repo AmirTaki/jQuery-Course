@@ -17,26 +17,43 @@
         // }
 
 
+        var menu = false;
+
         $.noConflict();
 
         jQuery(document).ready(($) => {
-          
-            // $('#test').click(function () {
-            //     alert('clicked')
-            // })       
-          
-            // $('#test').click(() => {
-            //     alert('clicked')
-            // })       
 
-            $('#test').on({
-                "click": () => {
-                    alert('clicked')
-                },
-                "contextmenu": () => {
-                    $("#test").css({color: "red"})
+            $('#hover').hover(function () {
+                $(this).hide()
+            })
+
+            $('#clickMe').click(function () {
+                $(this).hide()
+            })
+
+            $("#doubleClick").dblclick(function () {
+                $(this).hide();
+            })
+
+            $('#leave').mouseout(function () {
+                $(this).hide()
+            })
+
+            $('#press').keypress((e) => {
+                console.log("ok")
+                if (menu === false){
+                    $('body').css({backgroundColor:"black"})
+                    $(".pargrapah").toggle("active")
+                    $("nav").toggle("active")
+                
+                }
+                else {
+                    $('body').css({backgroundColor:"white"})
+                    $(".pargrapah").toggle("active")
+                    $("nav").toggle("active")
                 }
             })
+         
         })
 
   
@@ -45,7 +62,22 @@
 
 </head>
 <body>
-      <p id = 'test'>this is a paragraph</p>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="pargrapah active">
+            <p id = "hover">Hover me !</p>
+            <p id = 'clickMe'>Click me!</p>
+            <p id = 'doubleClick'>doubleClick Click me!</p>
+            <p id = "leave">Leave me alone</p>
+            <p id = "press"> Press [enter]</p>
+    </div>
+
+
 
     <script>
         // document.querySelector("#test").onclick =  function() {
