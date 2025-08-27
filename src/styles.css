@@ -1,15 +1,6 @@
-.content-befor {
-    background-color: red;
-}
-
-
-.content-after {
-    background-color: blue;
-    display: none;
-    opacity: .3;
-}
-
 .content-box{
-    width: 150px;
-    height: 60px;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    font-size: 15px;
 }

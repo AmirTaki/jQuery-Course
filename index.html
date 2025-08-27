@@ -22,29 +22,42 @@
         $.noConflict();
 
         jQuery(document).ready(($) => {
-            $('.content-box').click( () => {
+            $('.content-box').click (()  => {
                 $('.content-box').animate({
-                    width : '500px',
-                    height: '300px'
-                }, 1000,);
-                $('.content-after').show().animate({
-                    opacity: '1'
-                },2000)
+                    width: '500px',
+                    height : "400px",
+                    // fontSize: '30px'
+                }, 3000).animate({
+                    fontSize: "30px"
+                }, 3000)
+              
+            });
+
+            // $("#stopAnimation").click(() => {
+            //     $('.content-box').animate({
+            //         fontSize: "15px"
+            //     },3000).animate({
+            //         width: "100px",
+            //         height: "100px"
+            //     }, 3000)
+            // })
+            $("#stopAnimation").click(() => {
+                $('.content-box').stop(false, false)
             })
          
         })
 
-  
+    
       
     </script>
 
 </head>
 <body>
+    <button id = "stopAnimation">Click me stop animation!</button>
     <div class="content-box">
-        <p class="content-befor">Click me to see more!</p>
-        <div class="content-after">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ad nihil, eos expedita blanditiis error. Dicta pariatur sapiente minus recusandae officiis corrupti eos libero dolorum dolor repudiandae rem a modi blanditiis vitae nisi neque voluptas, illum voluptatum eum quia? Quam molestias, iure suscipit omnis, quas maxime nostrum consequatur distinctio nam impedit inventore quasi unde? Excepturi fugit optio cumque doloribus ipsa? Consectetur architecto nisi dicta quas minima amet velit assumenda perferendis molestias blanditiis sequi eum tempora, necessitatibus tenetur iste distinctio ipsa quasi corporis nobis quia vel. Architecto officia ratione voluptatum quibusdam distinctio sit quod reprehenderit, eaque, vel at perspiciatis, praesentium voluptate.
-        </div>
+        <p class="content-befor"></p>
+        Click me to START animaition
+        <p></p>
     </div>
 
    
