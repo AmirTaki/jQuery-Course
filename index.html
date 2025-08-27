@@ -22,16 +22,14 @@
         $.noConflict();
 
         jQuery(document).ready(($) => {
-            $("#menuToggle").click(()=> {
-                // $('#side-nav').slideUp(1000)
-                // $('#side-nav').slideDown(1000)
-                $('#side-nav').slideToggle(2000)
-            })
-
-            $('.info-title').click(() => {
-                $('.info-content').slideToggle("slow", () => {
-                    alert("hi")
-                })
+            $('.content-box').click( () => {
+                $('.content-box').animate({
+                    width : '500px',
+                    height: '300px'
+                }, 1000,);
+                $('.content-after').show().animate({
+                    opacity: '1'
+                },2000)
             })
          
         })
@@ -42,34 +40,14 @@
 
 </head>
 <body>
-    <header>
-        <h1 id = "menuToggle">menu</h1>
-    </header>
-    <nav id = 'side-nav'>
-        <ul>
-            <li><a href="" class = 'active'>Home</a></li>
-            <li><a href="">My channel</a></li>
-            <li><a href="">Trending</a></li>
-            <li><a href="">Subscribtions</a></li>
-        </ul>
-        <ul>
-            <li><p>LIBRANRY</p></li>    
-            <li><a href="">History</a></li>
-            <li><a href="">Watch Later</a></li>
-            <li><a href="">Purchases</a></li>
-            <li><a href="">jQuery</a></li>
-        </ul>
-    </nav>
-
-    <div class="info-box">
-        <div class="info-title">
-            <p>info title!</p>
-        </div>
-        <div class="info-content">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quae nisi perspiciatis? Iusto praesentium esse quos! Quisquam maxime autem architecto, natus velit necessitatibus nisi ex hic laborum. Voluptates dolorum reiciendis facilis quasi, fugiat placeat et qui minus aliquam accusamus ex nesciunt corporis porro non totam ad dolor cum commodi voluptate pariatur itaque? Alias hic dolores quod. Modi perspiciatis id expedita eius nemo dolore, mollitia odio excepturi numquam autem doloremque harum incidunt ipsam, officiis nobis facere eligendi quas iste necessitatibus et similique fuga ducimus quidem vero! Illo, at odit. Quas optio dolorem voluptas reprehenderit magnam ipsa nesciunt dolor impedit officiis nostrum?</p>
+    <div class="content-box">
+        <p class="content-befor">Click me to see more!</p>
+        <div class="content-after">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ad nihil, eos expedita blanditiis error. Dicta pariatur sapiente minus recusandae officiis corrupti eos libero dolorum dolor repudiandae rem a modi blanditiis vitae nisi neque voluptas, illum voluptatum eum quia? Quam molestias, iure suscipit omnis, quas maxime nostrum consequatur distinctio nam impedit inventore quasi unde? Excepturi fugit optio cumque doloribus ipsa? Consectetur architecto nisi dicta quas minima amet velit assumenda perferendis molestias blanditiis sequi eum tempora, necessitatibus tenetur iste distinctio ipsa quasi corporis nobis quia vel. Architecto officia ratione voluptatum quibusdam distinctio sit quod reprehenderit, eaque, vel at perspiciatis, praesentium voluptate.
         </div>
     </div>
 
+   
     <script>
         // document.querySelector("#test").onclick =  function() {
         //     alert("clickd")
