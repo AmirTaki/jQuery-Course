@@ -23,15 +23,15 @@
 
         jQuery(document).ready(($) => {
             $("#menuToggle").click(()=> {
-                // $("#side-nav").toggle(1000, () => {
-                //     alert('hi ');
-                // })       
-                // $("#side-nav").fadeIn()
-                // $("#side-nav").fadeOut()
-                $("#side-nav").fadeToggle(2000,  () =>  {
+                // $('#side-nav').slideUp(1000)
+                // $('#side-nav').slideDown(1000)
+                $('#side-nav').slideToggle(2000)
+            })
+
+            $('.info-title').click(() => {
+                $('.info-content').slideToggle("slow", () => {
                     alert("hi")
                 })
-                  
             })
          
         })
@@ -61,6 +61,14 @@
         </ul>
     </nav>
 
+    <div class="info-box">
+        <div class="info-title">
+            <p>info title!</p>
+        </div>
+        <div class="info-content">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum quae nisi perspiciatis? Iusto praesentium esse quos! Quisquam maxime autem architecto, natus velit necessitatibus nisi ex hic laborum. Voluptates dolorum reiciendis facilis quasi, fugiat placeat et qui minus aliquam accusamus ex nesciunt corporis porro non totam ad dolor cum commodi voluptate pariatur itaque? Alias hic dolores quod. Modi perspiciatis id expedita eius nemo dolore, mollitia odio excepturi numquam autem doloremque harum incidunt ipsam, officiis nobis facere eligendi quas iste necessitatibus et similique fuga ducimus quidem vero! Illo, at odit. Quas optio dolorem voluptas reprehenderit magnam ipsa nesciunt dolor impedit officiis nostrum?</p>
+        </div>
+    </div>
 
     <script>
         // document.querySelector("#test").onclick =  function() {
