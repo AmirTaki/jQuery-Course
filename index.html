@@ -9,50 +9,53 @@
     <!-- <script src = "./src/MyPlugin.js"></script> -->
     <script>
 
-       
+       $.noConflict();
+       jQuery(document).ready(($) => {
+        $('#change').on(
+            {
+                'click': () => {
+                    
+                    let changeType =  $('#viewPwdLogin').attr('type') === 'password' ? "text" : 'password';
+                    let passwordType = $('#viewPwdLogin').attr('type', changeType);
+                }
+            }
+        )
+       })
+        
+ 
 
-        // $.noConflict();
-
-        // jQuery(document).ready(($) => { 
-        // }
-
-
-        // $.noConflict();
-
-        // jQuery(document).ready(($) => {
-        //     var page_url = window.location.href;
-        //     var page_id  = page_url.substring(page_url.lastIndexOf("#") + 1)
-        //     alert(page_id)
-        //     if (page_id == "section3"){
-        //         $('html, body').animate({
-        //             scrollTop: $('#scroll-' + page_id)
-        //         })  
-        //     }
-        //     console.log(page_id)
-         
-        // })
-
-    
       
     </script>
 
 </head>
 <body>
-    <a href="subpage.html#section3">
-        <div class="">
-            <p>Go to section3</p>
-        </div>
-    </a>
+    <form action="">
+        <input type="text" name = "uid" placeholder="Username">
+        <input type="password" id = "viewPwdLogin" name = 'pwd' placeholder="Password">
+        <button onclick="changePwdView()" type = "button" id = 'change'> View/Hide </button>
+        <button>Login</button>
 
-    <a href="subpage.html#post">
-        <div>
-            <p>Go to the post section</p>
-        </div>
-    </a>
+        
+    </form>
+     <script>
+        
+        // let viewLoginPwd = false;
+        // const changePwdView = () => {
+        //    let getPwdView =  document.getElementById("viewPwdLogin");
 
-   
-    <script>
-  
+
+        //    if(viewLoginPwd === false){
+        //     getPwdView.setAttribute("type", 'text')
+        //     viewLoginPwd = true
+        //    }
+        //    else if (viewLoginPwd === true){
+        //     getPwdView.setAttribute("type", 'password')
+        //     viewLoginPwd = false
+        //    } 
+        // } 
+
+
+
     </script>
 </body>
 
