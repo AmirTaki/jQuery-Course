@@ -11,20 +11,23 @@
 
        $.noConflict();
        jQuery(document).ready(($) => {
-         $('#btn1').click( ()=> {
-            $('#test1').text();
-            // alert($('#test1').text())
-            $('#test1').text('this is new text')
-         })  
-         $("#btn2").click(() => {
-            // alert($("#test2").html())
-            $("#test2").html("<i>this is new text</i>")
-         }) 
+
+
+            var creteEle = document.createElement("p")
+
+            // $('#container').append("A new Paragraph");
        
-         $('#btn3').click(() => {
-            // alert($('#test3').val()) 
-            $('#test3').val("please enter the name ?")
-         })
+            // $('#container').prepend("<i>A prepend new Paragraph</i>");
+       
+            // $('#container').before("<b>A before new Paragraph</b>");
+       
+            // $('#container').after("<b>A after new Paragraph</b>", '<br /> <i>add anoterh paragrah aftter </i>');
+
+
+            creteEle.innerHTML = "<i> A new new pargraph </i> "
+
+
+            $('#container').append("<b>A after new Paragraph</b>", creteEle  );
         })
 
         
@@ -35,32 +38,14 @@
 
 </head>
 <body>
+
+    <div id="container">
+        <p id="p-first">The first paragraph</p>
+        <p id="p-second">The second paragraph</p>
+        <p id="p-third">The third paragraph</p>
+    </div>
     
-    <p id = 'test1'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <p id = 'test2'><b>Obcaecati quas quo eos! Expedita, hic ab consectetur porro deleniti id nemo.</b></p>
-    <input type="text" id = 'test3'>
-    <button id = 'btn1'>Text</button>
-    <button id = 'btn2'>HTML</button>
-    <button id = 'btn3'>Input</button>
-     <script>
-        
-        // let viewLoginPwd = false;
-        // const changePwdView = () => {
-        //    let getPwdView =  document.getElementById("viewPwdLogin");
-
-
-        //    if(viewLoginPwd === false){
-        //     getPwdView.setAttribute("type", 'text')
-        //     viewLoginPwd = true
-        //    }
-        //    else if (viewLoginPwd === true){
-        //     getPwdView.setAttribute("type", 'password')
-        //     viewLoginPwd = false
-        //    } 
-        // } 
-
-
-
+    <script>
     </script>
 </body>
 
