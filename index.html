@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./src/styles.css">
     <script src = "./src/jquery.js"></script>
-    <script src = "./src/MyPlugin.js"></script>
+    <!-- <script src = "./src/MyPlugin.js"></script> -->
     <script>
 
        
@@ -17,35 +17,20 @@
         // }
 
 
-        var menu = false;
+        // $.noConflict();
 
-        $.noConflict();
-
-        jQuery(document).ready(($) => {
-            $('.content-box').click (()  => {
-                $('.content-box').animate({
-                    width: '500px',
-                    height : "400px",
-                    // fontSize: '30px'
-                }, 3000).animate({
-                    fontSize: "30px"
-                }, 3000)
-              
-            });
-
-            // $("#stopAnimation").click(() => {
-            //     $('.content-box').animate({
-            //         fontSize: "15px"
-            //     },3000).animate({
-            //         width: "100px",
-            //         height: "100px"
-            //     }, 3000)
-            // })
-            $("#stopAnimation").click(() => {
-                $('.content-box').stop(false, false)
-            })
+        // jQuery(document).ready(($) => {
+        //     var page_url = window.location.href;
+        //     var page_id  = page_url.substring(page_url.lastIndexOf("#") + 1)
+        //     alert(page_id)
+        //     if (page_id == "section3"){
+        //         $('html, body').animate({
+        //             scrollTop: $('#scroll-' + page_id)
+        //         })  
+        //     }
+        //     console.log(page_id)
          
-        })
+        // })
 
     
       
@@ -53,21 +38,21 @@
 
 </head>
 <body>
-    <button id = "stopAnimation">Click me stop animation!</button>
-    <div class="content-box">
-        <p class="content-befor"></p>
-        Click me to START animaition
-        <p></p>
-    </div>
+    <a href="subpage.html#section3">
+        <div class="">
+            <p>Go to section3</p>
+        </div>
+    </a>
+
+    <a href="subpage.html#post">
+        <div>
+            <p>Go to the post section</p>
+        </div>
+    </a>
 
    
     <script>
-        // document.querySelector("#test").onclick =  function() {
-        //     alert("clickd")
-        // }
-        // document.querySelector("#test").addEventListener("click", () => {
-        //     alert("clicded")
-        // })
+  
     </script>
 </body>
 
