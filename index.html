@@ -11,16 +11,22 @@
 
        $.noConflict();
        jQuery(document).ready(($) => {
-        $('#change').on(
-            {
-                'click': () => {
-                    
-                    let changeType =  $('#viewPwdLogin').attr('type') === 'password' ? "text" : 'password';
-                    let passwordType = $('#viewPwdLogin').attr('type', changeType);
-                }
-            }
-        )
-       })
+         $('#btn1').click( ()=> {
+            $('#test1').text();
+            // alert($('#test1').text())
+            $('#test1').text('this is new text')
+         })  
+         $("#btn2").click(() => {
+            // alert($("#test2").html())
+            $("#test2").html("<i>this is new text</i>")
+         }) 
+       
+         $('#btn3').click(() => {
+            // alert($('#test3').val()) 
+            $('#test3').val("please enter the name ?")
+         })
+        })
+
         
  
 
@@ -29,14 +35,13 @@
 
 </head>
 <body>
-    <form action="">
-        <input type="text" name = "uid" placeholder="Username">
-        <input type="password" id = "viewPwdLogin" name = 'pwd' placeholder="Password">
-        <button onclick="changePwdView()" type = "button" id = 'change'> View/Hide </button>
-        <button>Login</button>
-
-        
-    </form>
+    
+    <p id = 'test1'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p id = 'test2'><b>Obcaecati quas quo eos! Expedita, hic ab consectetur porro deleniti id nemo.</b></p>
+    <input type="text" id = 'test3'>
+    <button id = 'btn1'>Text</button>
+    <button id = 'btn2'>HTML</button>
+    <button id = 'btn3'>Input</button>
      <script>
         
         // let viewLoginPwd = false;
